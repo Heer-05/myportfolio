@@ -1,0 +1,695 @@
+/* ============================================
+   GLOBAL CINEMATIC ATMOSPHERIC MOTION SYSTEM
+   Premium Dark Luxury AI/ML Portfolio
+   ============================================ */
+
+/* ============================================
+   LAYER 1: SOFT BLENDED DARK GRADIENTS
+   ============================================ */
+
+:root {
+    /* Gradient color stops */
+    --gradient-mulberry: #432430;
+    --gradient-indigo: #2A3548;
+    --gradient-cacao: #0F0807;
+    
+    /* Atmospheric opacity scales */
+    --atmosphere-opacity-subtle: 0.03;
+    --atmosphere-opacity-light: 0.06;
+    --atmosphere-opacity-medium: 0.08;
+    --atmosphere-opacity-visible: 0.12;
+}
+
+/* Global body atmospheric base */
+body {
+    background: linear-gradient(
+        135deg,
+        var(--gradient-cacao) 0%,
+        var(--gradient-indigo) 40%,
+        var(--gradient-mulberry) 70%,
+        var(--gradient-cacao) 100%
+    );
+    background-attachment: fixed;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(ellipse at 20% 50%, rgba(206, 179, 171, 0.04) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(67, 36, 48, 0.03) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 0%, rgba(42, 53, 72, 0.02) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+    animation: globalAtmosphericPulse 12s ease-in-out infinite;
+}
+
+/* ============================================
+   LAYER 2: ATMOSPHERIC MOTION SYSTEMS
+   ============================================ */
+
+/* Global atmospheric container */
+.atmospheric-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: var(--atmosphere-opacity-light);
+}
+
+/* Neural silk flow - flowing wave mesh */
+.neural-silk-flow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(45deg, transparent 48%, rgba(206, 179, 171, 0.1) 49%, rgba(206, 179, 171, 0.1) 51%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, rgba(206, 179, 171, 0.1) 49%, rgba(206, 179, 171, 0.1) 51%, transparent 52%);
+    background-size: 120px 120px;
+    background-position: 0 0, 60px 60px;
+    animation: neuralSilkFlow 40s linear infinite;
+    opacity: 0.04;
+}
+
+/* Cinematic fog texture - soft atmospheric haze */
+.cinematic-fog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(ellipse at 20% 30%, rgba(206, 179, 171, 0.08) 0%, transparent 40%),
+        radial-gradient(ellipse at 80% 70%, rgba(67, 36, 48, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(42, 53, 72, 0.04) 0%, transparent 60%);
+    animation: cinematicFogDrift 60s ease-in-out infinite;
+    opacity: 0.05;
+}
+
+/* Abstract data flow - flowing analytical structures */
+.data-flow-mesh {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(0deg, transparent 24%, rgba(206, 179, 171, 0.05) 25%, rgba(206, 179, 171, 0.05) 26%, transparent 27%, transparent 74%, rgba(206, 179, 171, 0.05) 75%, rgba(206, 179, 171, 0.05) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, rgba(206, 179, 171, 0.05) 25%, rgba(206, 179, 171, 0.05) 26%, transparent 27%, transparent 74%, rgba(206, 179, 171, 0.05) 75%, rgba(206, 179, 171, 0.05) 76%, transparent 77%, transparent);
+    background-size: 80px 80px;
+    animation: dataFlowShift 50s ease-in-out infinite;
+    opacity: 0.03;
+}
+
+/* Layered ambient movement - soft depth shifting */
+.ambient-depth-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 20%, rgba(206, 179, 171, 0.06) 0%, transparent 30%),
+        radial-gradient(circle at 70% 80%, rgba(67, 36, 48, 0.04) 0%, transparent 35%),
+        radial-gradient(circle at 50% 50%, rgba(42, 53, 72, 0.03) 0%, transparent 50%);
+    animation: ambientDepthShift 80s ease-in-out infinite;
+    opacity: 0.04;
+}
+
+/* ============================================
+   LAYER 3: MATTE CINEMATIC GRAIN TEXTURE
+   ============================================ */
+
+.film-grain-texture {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 2;
+    background-image: 
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise" seed="2"/></filter><rect width="100" height="100" fill="rgba(206,179,171,0.02)" filter="url(%23noise)"/></svg>');
+    background-size: 200px 200px;
+    opacity: 0.08;
+    animation: grainShimmer 8s ease-in-out infinite;
+}
+
+/* ============================================
+   LAYER 4: PARALLAX INTERACTION SYSTEM
+   ============================================ */
+
+.parallax-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 3;
+    opacity: 0;
+}
+
+.parallax-element {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(206, 179, 171, 0.04) 0%, transparent 50%);
+    transition: background 0.3s ease-out;
+}
+
+/* ============================================
+   KEYFRAME ANIMATIONS - GLOBAL ATMOSPHERE
+   ============================================ */
+
+@keyframes globalAtmosphericPulse {
+    0%, 100% {
+        opacity: 0.04;
+    }
+    50% {
+        opacity: 0.06;
+    }
+}
+
+@keyframes neuralSilkFlow {
+    0% {
+        background-position: 0 0, 60px 60px;
+    }
+    50% {
+        background-position: 60px 60px, 120px 120px;
+    }
+    100% {
+        background-position: 0 0, 60px 60px;
+    }
+}
+
+@keyframes cinematicFogDrift {
+    0%, 100% {
+        transform: translateX(0) translateY(0);
+        opacity: 0.05;
+    }
+    25% {
+        transform: translateX(20px) translateY(-10px);
+        opacity: 0.06;
+    }
+    50% {
+        transform: translateX(0) translateY(20px);
+        opacity: 0.05;
+    }
+    75% {
+        transform: translateX(-20px) translateY(-10px);
+        opacity: 0.06;
+    }
+}
+
+@keyframes dataFlowShift {
+    0%, 100% {
+        background-position: 0 0, 0 0;
+        opacity: 0.03;
+    }
+    50% {
+        background-position: 40px 40px, 40px 40px;
+        opacity: 0.04;
+    }
+}
+
+@keyframes ambientDepthShift {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.04;
+    }
+    50% {
+        transform: scale(1.02);
+        opacity: 0.05;
+    }
+}
+
+@keyframes grainShimmer {
+    0%, 100% {
+        opacity: 0.08;
+    }
+    50% {
+        opacity: 0.06;
+    }
+}
+
+/* ============================================
+   SECTION-SPECIFIC ATMOSPHERIC SYSTEMS
+   ============================================ */
+
+/* HERO SECTION - Flowing Neural Silk */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(45deg, transparent 48%, rgba(206, 179, 171, 0.08) 49%, rgba(206, 179, 171, 0.08) 51%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, rgba(206, 179, 171, 0.08) 49%, rgba(206, 179, 171, 0.08) 51%, transparent 52%);
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
+    pointer-events: none;
+    z-index: 0;
+    animation: heroNeuralFlow 45s linear infinite;
+    opacity: 0.04;
+}
+
+@keyframes heroNeuralFlow {
+    0% {
+        background-position: 0 0, 50px 50px;
+    }
+    100% {
+        background-position: 100px 100px, 150px 150px;
+    }
+}
+
+/* ABOUT SECTION - Atmospheric Fog */
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(ellipse at 30% 40%, rgba(206, 179, 171, 0.06) 0%, transparent 40%),
+        radial-gradient(ellipse at 70% 60%, rgba(67, 36, 48, 0.04) 0%, transparent 45%);
+    pointer-events: none;
+    z-index: 0;
+    animation: aboutFogDrift 70s ease-in-out infinite;
+    opacity: 0.05;
+}
+
+@keyframes aboutFogDrift {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+}
+
+/* SKILLS SECTION - Structured Mesh */
+.skills::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(0deg, transparent 24%, rgba(206, 179, 171, 0.06) 25%, rgba(206, 179, 171, 0.06) 26%, transparent 27%, transparent 74%, rgba(206, 179, 171, 0.06) 75%, rgba(206, 179, 171, 0.06) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, rgba(206, 179, 171, 0.06) 25%, rgba(206, 179, 171, 0.06) 26%, transparent 27%, transparent 74%, rgba(206, 179, 171, 0.06) 75%, rgba(206, 179, 171, 0.06) 76%, transparent 77%, transparent);
+    background-size: 70px 70px;
+    pointer-events: none;
+    z-index: 0;
+    animation: skillsMeshPulse 55s ease-in-out infinite;
+    opacity: 0.04;
+}
+
+@keyframes skillsMeshPulse {
+    0%, 100% {
+        opacity: 0.04;
+    }
+    50% {
+        opacity: 0.05;
+    }
+}
+
+/* EXPERIENCE SECTION - Timeline Depth */
+.experience::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(90deg, transparent 0%, rgba(206, 179, 171, 0.03) 50%, transparent 100%),
+        radial-gradient(ellipse at 50% 50%, rgba(42, 53, 72, 0.04) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    animation: experienceDepthShift 90s ease-in-out infinite;
+    opacity: 0.04;
+}
+
+@keyframes experienceDepthShift {
+    0%, 100% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(1.05);
+    }
+}
+
+/* PROJECTS SECTION - Cinematic AI Environment */
+.projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 25% 25%, rgba(206, 179, 171, 0.05) 0%, transparent 35%),
+        radial-gradient(circle at 75% 75%, rgba(67, 36, 48, 0.04) 0%, transparent 40%),
+        linear-gradient(135deg, transparent 0%, rgba(42, 53, 72, 0.03) 50%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+    animation: projectsCinematicFlow 100s ease-in-out infinite;
+    opacity: 0.05;
+}
+
+@keyframes projectsCinematicFlow {
+    0%, 100% {
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(30px) translateY(-20px);
+    }
+    50% {
+        transform: translateX(0) translateY(30px);
+    }
+    75% {
+        transform: translateX(-30px) translateY(-20px);
+    }
+}
+
+/* CERTIFICATIONS SECTION - Structured Depth */
+.certifications-research::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(0deg, transparent 24%, rgba(206, 179, 171, 0.05) 25%, rgba(206, 179, 171, 0.05) 26%, transparent 27%, transparent 74%, rgba(206, 179, 171, 0.05) 75%, rgba(206, 179, 171, 0.05) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, rgba(206, 179, 171, 0.05) 25%, rgba(206, 179, 171, 0.05) 26%, transparent 27%, transparent 74%, rgba(206, 179, 171, 0.05) 75%, rgba(206, 179, 171, 0.05) 76%, transparent 77%, transparent);
+    background-size: 90px 90px;
+    pointer-events: none;
+    z-index: 0;
+    animation: certificationsGridFlow 65s linear infinite;
+    opacity: 0.03;
+}
+
+@keyframes certificationsGridFlow {
+    0% {
+        background-position: 0 0, 0 0;
+    }
+    100% {
+        background-position: 90px 90px, 90px 90px;
+    }
+}
+
+/* ACHIEVEMENTS SECTION - Ambient Glow */
+.achievements::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(ellipse at 50% 30%, rgba(206, 179, 171, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 70%, rgba(67, 36, 48, 0.04) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+    animation: achievementsAmbientGlow 75s ease-in-out infinite;
+    opacity: 0.04;
+}
+
+@keyframes achievementsAmbientGlow {
+    0%, 100% {
+        opacity: 0.04;
+    }
+    50% {
+        opacity: 0.06;
+    }
+}
+
+/* TESTIMONIALS SECTION - Soft Emotional Motion */
+.testimonials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(ellipse at 40% 50%, rgba(206, 179, 171, 0.05) 0%, transparent 45%),
+        radial-gradient(ellipse at 60% 50%, rgba(67, 36, 48, 0.04) 0%, transparent 45%);
+    pointer-events: none;
+    z-index: 0;
+    animation: testimonialsEmotionalFlow 85s ease-in-out infinite;
+    opacity: 0.04;
+}
+
+@keyframes testimonialsEmotionalFlow {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+}
+
+/* CONTACT SECTION - Calm Ambient Gradient */
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(180deg, rgba(206, 179, 171, 0.04) 0%, transparent 50%, rgba(67, 36, 48, 0.03) 100%),
+        radial-gradient(ellipse at 50% 50%, rgba(42, 53, 72, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    animation: contactCalmGradient 95s ease-in-out infinite;
+    opacity: 0.04;
+}
+
+@keyframes contactCalmGradient {
+    0%, 100% {
+        opacity: 0.04;
+    }
+    50% {
+        opacity: 0.05;
+    }
+}
+
+/* ============================================
+   PARALLAX INTERACTION SYSTEM
+   ============================================ */
+
+.parallax-responsive {
+    position: relative;
+    z-index: 4;
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATION
+   ============================================ */
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Mobile optimization - reduce atmospheric intensity */
+@media (max-width: 768px) {
+    body::before {
+        animation: globalAtmosphericPulse 15s ease-in-out infinite;
+    }
+
+    .neural-silk-flow {
+        animation: neuralSilkFlow 50s linear infinite;
+        opacity: 0.02;
+    }
+
+    .cinematic-fog {
+        animation: cinematicFogDrift 80s ease-in-out infinite;
+        opacity: 0.03;
+    }
+
+    .data-flow-mesh {
+        opacity: 0.02;
+    }
+
+    .ambient-depth-layer {
+        opacity: 0.02;
+    }
+
+    .film-grain-texture {
+        opacity: 0.05;
+    }
+
+    /* Section atmospheres - reduced intensity */
+    .hero::before {
+        opacity: 0.02;
+    }
+
+    .about::before {
+        opacity: 0.03;
+    }
+
+    .skills::before {
+        opacity: 0.02;
+    }
+
+    .experience::before {
+        opacity: 0.02;
+    }
+
+    .projects::before {
+        opacity: 0.03;
+    }
+
+    .certifications-research::before {
+        opacity: 0.02;
+    }
+
+    .achievements::before {
+        opacity: 0.02;
+    }
+
+    .testimonials::before {
+        opacity: 0.02;
+    }
+
+    .contact::before {
+        opacity: 0.02;
+    }
+}
+
+/* ============================================
+   CINEMATIC BLUR LAYERING
+   ============================================ */
+
+.cinematic-blur-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 5;
+    background: radial-gradient(ellipse at 50% 50%, transparent 0%, rgba(15, 8, 7, 0.02) 100%);
+    backdrop-filter: blur(0.5px);
+}
+
+/* ============================================
+   SOFT SHADOW DEPTH SYSTEM
+   ============================================ */
+
+.shadow-depth-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 6;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   AMBIENT LIGHTING TRANSITIONS
+   ============================================ */
+
+@keyframes ambientLightingShift {
+    0%, 100% {
+        background: radial-gradient(ellipse at 50% 50%, rgba(206, 179, 171, 0.02) 0%, transparent 70%);
+    }
+    50% {
+        background: radial-gradient(ellipse at 50% 50%, rgba(206, 179, 171, 0.03) 0%, transparent 70%);
+    }
+}
+
+.ambient-lighting {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 7;
+    animation: ambientLightingShift 120s ease-in-out infinite;
+}
+
+/* ============================================
+   CONTENT LAYER - ENSURE READABILITY
+   ============================================ */
+
+main,
+section,
+.section-container {
+    position: relative;
+    z-index: 10;
+}
+
+/* ============================================
+   SMOOTH SCROLLING ENHANCEMENT
+   ============================================ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+   TRANSITION SMOOTHING
+   ============================================ */
+
+* {
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ============================================
+   RESPONSIVE ATMOSPHERIC ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 480px) {
+    .atmospheric-layer {
+        opacity: var(--atmosphere-opacity-subtle);
+    }
+
+    .neural-silk-flow {
+        opacity: 0.02;
+    }
+
+    .cinematic-fog {
+        opacity: 0.02;
+    }
+
+    .data-flow-mesh {
+        opacity: 0.01;
+    }
+
+    .ambient-depth-layer {
+        opacity: 0.02;
+    }
+
+    .film-grain-texture {
+        opacity: 0.04;
+    }
+}
